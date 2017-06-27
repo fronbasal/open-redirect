@@ -13,13 +13,12 @@
 
 <body>
     <nav class="red lighten-2">
-        <a href="https://github.com/fronbasal/open-redirect" class="brand-logo center" target="_blank">Open Redirect</a>
+        <a href="/" class="brand-logo center" target="_blank">Open Redirect</a>
     </nav>
     <div class="container">
         <div class="card-panel grey lighten-4 hoverable">
             <h4 class="center">Sucess!</h4>
-            <p class="flow-text">Sucessfully saved your domain!</p>
-            <p>How to configure your DNS for redirection:</p>
+            <p class="flow-text">How to configure your DNS for redirection:</p>
             <table class="table responsive-table">
                 <thead>
                     <tr>

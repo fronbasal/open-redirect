@@ -2,5 +2,6 @@
     "host": "localhost:3000",
     "recaptcha_site_key": "6LeAEScUAAAAAOfU13UZFVHKZnmkimlHgLHN0lGb",
     "recaptcha_site_secret": "6LeAEScUAAAAAD1ck4c5VjPCayrkK_ORv36F1WVQ",
-    "mongo_url": "localhost:27017"
+    "mongo_url": "localhost:27017",
+    "contact": "mail@fronbasal.de"
 }

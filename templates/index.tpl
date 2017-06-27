@@ -27,12 +27,29 @@
                 <input name="source" type="text" placeholder="example.com" required>
                 <p>Target url</p>
                 <input name="target" type="url" placeholder="https://example.com" required>
+                <p>Set a pin (for deleting/altering the domain.)</p>
+                <input name="pin" type="number" required>
                 <div class="center">
                     <div class="g-recaptcha" data-sitekey="{{ .siteKey }}"></div>
                     <button type="submit" class="btn btn-large waves-effect waves-light">Submit
                             <i class="material-icons right">send</i>
                     </button>
                 </div>
+            </form>
+        </div>
+        <div class="card-panel grey lighten-4">
+            <form action="/delete" method="POST">
+                <h4 class="center">Delete a domain</h4>
+                <p>Your domain</p>
+                <input name="source" type="text" placeholder="example.com" required>
+                <p>Your pin</p>
+                <input name="pin" type="text" required>
+                <div class="center">
+                    <button type="submit" class="btn btn-large waves-effect waves-light">Submit
+                            <i class="material-icons right">send</i>
+                    </button>
+                </div>
+                <p class="flow-text center">If you forgot your pin, contact {{ .contact }}</p>
             </form>
         </div>
     </div>
