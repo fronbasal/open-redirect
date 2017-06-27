@@ -98,13 +98,12 @@ func main() {
 				return
 			}
 			C := session.DB("open-redirect").C("redirections")
-			result := redirect{}
-			err2 := C.Find(bson.M{"source": c.PostForm("source")}).One(&result)
+			err2 := C.Remove(bson.M{"source": c.PostForm("source"), "pin": c.PostForm("pin")})
 			if err2 != nil {
-				c.JSON(400, gin.H{"message": "The domain your entered does not exist! Try creating it first!", "error": true})
+				c.JSON(400, gin.H{"message": "The domain your entered does not exist or you entered a wrong pin.", "error": true})
 				return
 			}
-
+			c.HTML(200, "delete.tpl", nil)
 		} else {
 			c.JSON(400, gin.H{"message": "Invalid request!", "error": true})
 			return

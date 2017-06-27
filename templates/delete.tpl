@@ -1,4 +1,4 @@
-{{ define "success.tpl" }}
+{{ define "delete.tpl" }}
 <!DOCTYPE html>
 <html>
 
@@ -17,24 +17,8 @@
     </nav>
     <div class="container">
         <div class="card-panel grey lighten-4 hoverable">
-            <h4 class="center">Sucess!</h4>
-            <p class="flow-text">How to configure your DNS for redirection:</p>
-            <table class="table responsive-table">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Type</th>
-                        <th>Target</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>{{ .domain }}</th>
-                        <th>CNAME</th>
-                        <th>{{ .host }}</th>
-                    </tr>
-                </tbody>
-            </table>
+            <h4 class="center">Congrats(?)</h4>
+            <p class="flow-text">Your domain has been deleted from our database..</p>
         </div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
