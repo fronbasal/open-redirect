@@ -1,0 +1,6 @@
+{
+    "host": "localhost:3000",
+    "recaptcha_site_key": "",
+    "recaptcha_site_secret": "",
+    "mongo_url": "localhost:27017"
+}
