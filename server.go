@@ -45,7 +45,7 @@ func main() {
 			result := redirect{}
 			err2 := C.Find(bson.M{"source": c.Request.Host}).One(&result)
 			if err2 != nil {
-				c.Redirect(302, "http://"+config.Host)
+				c.HTML(404, "invalid.tpl", gin.H{"domain": c.Request.Host})
 				return
 			}
 			c.Redirect(302, result.Target)
