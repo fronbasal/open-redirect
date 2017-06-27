@@ -104,6 +104,7 @@ func main() {
 				c.JSON(400, gin.H{"message": "The domain your entered does not exist! Try creating it first!", "error": true})
 				return
 			}
+
 		} else {
 			c.JSON(400, gin.H{"message": "Invalid request!", "error": true})
 			return
