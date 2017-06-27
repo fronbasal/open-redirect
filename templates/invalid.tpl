@@ -1,4 +1,4 @@
-{{ define "success.tpl" }}
+{{ define "invalid.tpl" }}
 <!DOCTYPE html>
 <html>
 
