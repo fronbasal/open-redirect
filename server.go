@@ -36,7 +36,19 @@ func main() {
 	r.LoadHTMLGlob("templates/*")
 	r.GET("/", func(c *gin.Context) {
 		if c.Request.Host != config.Host {
-			// Load target from database
+			session, err := mgo.Dial(config.Mongo)
+			if err != nil {
+				c.JSON(500, gin.H{"message": "Error while establishing database link", "error": true})
+				return
+			}
+			C := session.DB("open-redirect").C("redirections")
+			result := redirect{}
+			err2 := C.Find(bson.M{"source": c.Request.Host}).One(&result)
+			if err2 != nil {
+				c.Redirect(302, "http://"+config.Host)
+				return
+			}
+			c.Redirect(302, result.Target)
 		} else {
 			c.HTML(200, "index.tpl", gin.H{
 				"siteKey": config.Key,
