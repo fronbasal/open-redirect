@@ -5,7 +5,5 @@ But what about redirection? Safe!
 
 Here comes open redirect: an open source, lightweight tool for redirecting domains to a destination, without hustle.
 
-You can easily setup this tool on your own server (Binary is built for Linux x86_64):
+You can easily setup this tool on your own server using docker.
 
-- Change config.json to your settings
-- `./server`
